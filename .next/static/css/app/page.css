@@ -1,0 +1,67 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/style.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+@import url("https://p.typekit.net/p.css?s=1&k=jfw5qrv&ht=tk&f=55314&a=21640797&app=typekit&e=css");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --_hue: 0;
+  --_size: 2rem;
+  --_tspeed_fast: 200ms;
+  --_tspeed_slow: 400ms;
+
+  /* light mode */
+  --bg--light: var(--_hue) 0% 97%;
+  --txt--light: var(--_hue) 0% 9%;
+  --accent--light: var(--_hue) 0% 2%;
+
+  /* dark mode  */
+
+  /* default */
+  --bg: var(--bg--light);
+  --txt: var(--txt--light);
+  --accent: var(--accent--light);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  margin-inline: auto;
+}
+
+header h1 {
+  font-size: calc(var(--_size) * 1.3);
+  word-spacing: 0.125em;
+  letter-spacing: 0.0625em;
+  -webkit-margin-after: 0.25em;
+          margin-block-end: 0.25em;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 50%;
+  grid-gap: 0.25em;
+  gap: 0.25em;
+  margin-inline: auto;
+}
+
+.cell {
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  margin: -1px -1px 0 0;
+  border: solid thin;
+}
+

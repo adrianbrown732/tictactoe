@@ -1,20 +1,22 @@
-import NewButton from "./cell-button";
+import Header from "./header";
+import NewCell from "./cell-button";
 
 export default function HomePage() {
   return (
     <>
-      <h1>Tic Tac Toe</h1>
+      <Header></Header>
       <main className="board">
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
-        <NewButton className="cell"></NewButton>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
+        <NewCell></NewCell>
       </main>
+      <footer></footer>
     </>
   );
 }
