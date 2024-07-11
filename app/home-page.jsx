@@ -1,21 +1,11 @@
 import Header from "./header";
-import NewCell from "./cell-button";
+import GameBoard from "./gameboard";
 
 export default function HomePage() {
   return (
     <>
       <Header></Header>
-      <main className="board">
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-        <NewCell></NewCell>
-      </main>
+      <GameBoard></GameBoard>
       <footer></footer>
     </>
   );
