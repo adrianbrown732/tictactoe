@@ -88,5 +88,22 @@ header h1 {
 
 .cell:hover {
   background: hsl(var(--accent) / 0.7);
+  border: solid thin hsl(var(--accent) / 0.7);
+}
+
+.x {
+  fill: white;
+}
+
+.line {
+  transform-origin: center;
+}
+
+.left {
+  rotate: 45deg;
+}
+
+.right {
+  rotate: -45deg;
 }
 
