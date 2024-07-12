@@ -3,15 +3,23 @@
 import { useState } from "react";
 import NewCell from "./cell-button";
 import SymbolX from "./x-icon";
+import SymbolO from "./o-icon";
 
 export default function GameBoard() {
+  const players = [<SymbolX />, <SymbolO />];
+
   const [squares, setSquares] = useState(Array(9).fill(null));
-  const players = [<SymbolX />];
+  const [xIsNext, setXIsNext] = useState(true);
 
   function handleClick(i) {
     const nextSquares = squares.slice();
-    nextSquares[i] = players[0];
+
+    if (nextSquares[i] !== null) {
+      return;
+    }
+    nextSquares[i] = xIsNext ? players[0] : players[1];
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
   return (
@@ -44,6 +52,9 @@ export default function GameBoard() {
         value={squares[4]}
         onSquareClick={() => {
           handleClick(4);
+        }}
+        style={{
+          opacity: 1,
         }}
       />
       <NewCell

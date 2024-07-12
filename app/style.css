@@ -1,5 +1,3 @@
-@import url("https://p.typekit.net/p.css?s=1&k=jfw5qrv&ht=tk&f=55314&a=21640797&app=typekit&e=css");
-
 *,
 *::after,
 *::before {
@@ -40,12 +38,7 @@ body {
   text-align: center;
 }
 
-header {
-  width: 100%;
-  margin-inline: auto;
-}
-
-header h1 {
+h1 {
   font-size: calc(var(--_size) * 1.3);
   word-spacing: 0.125em;
   letter-spacing: 0.0625em;
@@ -55,7 +48,7 @@ header h1 {
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 50%;
+  width: 75%;
   gap: 0.25em;
   margin-inline: auto;
   min-width: 330px;
@@ -68,26 +61,40 @@ header h1 {
   aspect-ratio: 1/1;
   cursor: pointer;
   margin: -1px -1px 0 0;
-  border: solid thin;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   background: hsl(var(--accent));
-  box-shadow: 0px 0 5px 1px hsl(var(--accent) / 0.2);
-  transition: 200ms ease-out;
+  filter: drop-shadow(0px 0px 5px hsl(var(--accent) / 0.1));
+  transition: background-color var(--_tspeed_fast) ease-out;
 }
 
-.cell svg {
+.cell:empty:hover {
+  background: hsl(var(--accent) / 0.5);
+}
+
+.icon {
+  --icon-color: white;
+  --stroke-size: 10px;
+
   width: 65%;
+  opacity: 0;
+  transition: var(--_tspeed_fast) ease-in-out;
 }
 
-.cell:hover {
-  background: hsl(var(--accent) / 0.7);
-  border: solid thin hsl(var(--accent) / 0.7);
+.show .icon {
+  opacity: 1;
+}
+
+.o {
+  fill: transparent;
+  stroke: var(--icon-color);
+  stroke-width: var(--stroke-size);
 }
 
 .x {
-  fill: white;
+  fill: var(--icon-color);
 }
 
 .line {
